@@ -33,14 +33,63 @@
             "id": "2d07afd5-5131-4606-a8e3-975c3f4408cb",
             "name": "Test event",
             "functionId": "a4d95f1e-2701-4579-b5c1-b8067446dc11",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
+      },
+      "bde35b93-f724-4ab6-9570-af6422ee450a": {
+        "id": "bde35b93-f724-4ab6-9570-af6422ee450a",
+        "parent": null,
+        "name": "kjs.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "kjs.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "klamjs",
+          "description": "klamjsdesc"
+        },
+        "triggers": [
+          {
+            "resourceName": "cweKTestSQSRule1",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "9d58c89d-ca9e-4646-bc3e-6d1105c8dd24": {
+            "id": "9d58c89d-ca9e-4646-bc3e-6d1105c8dd24",
+            "name": "Test event",
+            "functionId": "bde35b93-f724-4ab6-9570-af6422ee450a",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "f0ef82d7-aea8-44e6-9c1b-e6f54a977d15": {
+        "id": "f0ef82d7-aea8-44e6-9c1b-e6f54a977d15",
+        "parent": null,
+        "name": "Authorizer.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Authorizer.js"
       }
     },
     "openFiles": [
-      "a4d95f1e-2701-4579-b5c1-b8067446dc11"
+      "a4d95f1e-2701-4579-b5c1-b8067446dc11",
+      "bde35b93-f724-4ab6-9570-af6422ee450a"
     ],
     "currentFileId": "a4d95f1e-2701-4579-b5c1-b8067446dc11",
     "resources": {
@@ -70,6 +119,26 @@
           "stageDeploymentId": "p8r2a6",
           "mode": 1
         }
+      },
+      "cweKTestSQSRule1": {
+        "name": "cweKTestSQSRule1",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 1,
+          "arn": "arn:aws:events:us-east-1:318300609668:rule/KTestSQSRule1",
+          "name": "KTestSQSRule1",
+          "eventBusName": "default"
+        }
+      },
+      "storagesamplegcs": {
+        "name": "storagesamplegcs",
+        "type": "CloudStorage",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "name": "sample_gcs"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -85,6 +154,22 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "GCP_SERVICE_ACCOUNT_KEY",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "GCP_PROJECT",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
       }
     ],
     "packageJSON": {
@@ -93,6 +178,13 @@
           "name": "requests",
           "language": "python",
           "version": "2.18.0",
+          "dev": false,
+          "notRemovable": false
+        },
+        "googleapis": {
+          "name": "googleapis",
+          "language": "nodejs",
+          "version": "29.0.0",
           "dev": false,
           "notRemovable": false
         }
@@ -107,7 +199,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1587620758135
+    "lastSave": 1587621037720
   },
   "VCS_STATE": {
     "provider": "GitHub",
