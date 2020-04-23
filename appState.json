@@ -1,0 +1,119 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "a4d95f1e-2701-4579-b5c1-b8067446dc11": {
+        "id": "a4d95f1e-2701-4579-b5c1-b8067446dc11",
+        "parent": null,
+        "name": "retryawspython.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "retryawspython.py",
+        "cursor": {
+          "lineNumber": 3,
+          "column": 29
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "retryawspython"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1TestUpdateAPiupdateapiget",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "2d07afd5-5131-4606-a8e3-975c3f4408cb": {
+            "id": "2d07afd5-5131-4606-a8e3-975c3f4408cb",
+            "name": "Test event",
+            "functionId": "a4d95f1e-2701-4579-b5c1-b8067446dc11",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "a4d95f1e-2701-4579-b5c1-b8067446dc11"
+    ],
+    "currentFileId": "a4d95f1e-2701-4579-b5c1-b8067446dc11",
+    "resources": {
+      "apigusEast1TestUpdateAPiupdateapiget": {
+        "name": "apigusEast1TestUpdateAPiupdateapiget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestUpdateAPi",
+          "apiId": "2qrk3je34j",
+          "endpointType": "EDGE",
+          "rootResourceId": "urxui8gowi",
+          "existingResources": {
+            "/updateapi": "0ebc67",
+            "/": "urxui8gowi"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/updateapi",
+          "resourceName": "updateapi",
+          "resourceId": "0ebc67",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test1",
+          "stageDeploymentId": "p8r2a6",
+          "mode": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "requests": {
+          "name": "requests",
+          "language": "python",
+          "version": "2.18.0",
+          "dev": false,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "retryawspython",
+    "projectDescription": "smoke2",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1587620758135
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "retryawspython",
+      "url": "https://github.com/Kumudikatest/retryawspython"
+    }
+  }
+}
